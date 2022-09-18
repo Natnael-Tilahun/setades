@@ -1,28 +1,22 @@
-import { Route, Routes, Link } from "react-router-dom"
-import Home from "./pages/Home"
-import Product from "./pages/Product"
-import Navbar from "./components/Navbar"
+import { Route,Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import NoPage from "./pages/NoPage"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
-
-
   return (
-<>
-<Link to="/">Home</Link>
-<Link to="/product">Products</Link>
-
-    {/* <Navbar /> */}
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route exact path="/Product" element={<Product />} />
-  </Routes>
-  {/* <div className="App">
-  <Navbar />
-  <Hero />
-  <Footer />
-  </div> */}
+    <>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={ <Home />} />
+        <Route path="Products" element={ <Products />} />
+        <Route path="*" element={ <NoPage/> }/>
+      </Routes>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
