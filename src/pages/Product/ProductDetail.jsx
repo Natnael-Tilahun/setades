@@ -1,25 +1,32 @@
 import React from "react";
-import Modal from "./Modal";
-import { useState } from "react";
+import { useParams } from "react-router-dom";
+import data from "../../data";
 import { Link } from "react-router-dom";
 
-function Products(props) {
+function ProductDetail() {
+  const { productId } = useParams();
+  const myProduct = data.find((item) => item.id == productId);
   return (
-    <>
-      <div className="w-full max-w-xs bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
+    <div className="min-h-[calc(100vh-310px)] px-20 py-5 justify-self-center mx-auto items-center rounded-lg shadow w-full max-w-4xl  flex flex-col m-3">
+      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white pt-3 pb-10 uppercase w-full text-center">
+        Order us using telegram or call
+      </h5>
+      <div className="flex flex-col md:flex-row gap-10">
+        <img
+          className="p-0 rounded-t-lg h-auto max-h-full w-full bg-origin-content"
+          src="/qr.jpg"
+          alt="product image"
+        />
+        <div className="px-0 pb-5 w-full min-w-xl">
           <img
-            className="p-0 rounded-t-lg max-h-56 w-full bg-origin-content"
-            src={props.url}
+            className="p-0 rounded-t-lg max-h-56 w-full bg-origin-content bg-cover"
+            src={myProduct.url}
             alt="product image"
           />
-        </a>
-        <div className="px-5 pb-5">
-          <a href="#">
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white pt-3">
-              {props.title}
-            </h5>
-          </a>
+          <h1 className="font-bold pt-3">Product - {myProduct.title}</h1>
+          <h1 className="font-bold ">Price - ${myProduct.price}</h1>
+          <h1 className="font-bold">Phone - 0933654654</h1>
+
           <div className="flex items-center mt-2.5 mb-5">
             <svg
               aria-hidden="true"
@@ -75,21 +82,16 @@ function Products(props) {
               5.0
             </span>
           </div>
-          <div className="flex justify-between items-center">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">
-              ${props.price}
-            </span>
-            <Link
-              to={`/Products/${props.id}`}
-              className="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Order Now
-            </Link>
-          </div>
+          <Link
+            className="text-right text-[#ff9797] hover:text-[#f87373]"
+            to="/Products"
+          >
+            <h1>Back to products</h1>
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Products;
+export default ProductDetail;

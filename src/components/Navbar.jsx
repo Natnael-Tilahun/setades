@@ -56,7 +56,7 @@ function Navbar() {
           onClick={closeNav}
         >
           <Link>
-            <img src="img.jpg" alt="Logo" className="w-14 rounded-md" />
+            <img src="/img.jpg" alt="Logo" className="w-14 rounded-md" />
           </Link>
         </h1>
         <hr />
