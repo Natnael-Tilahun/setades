@@ -29,14 +29,14 @@ function Navbar() {
       <ul className="hidden md:flex">
         <Link
           to="/"
-          className="p-4 hover:text-slate-700 hover:border-b-2 border-gray-700"
+          className="p-4 hover:text-slate-700 hover:border-b-2 border-gray-700 "
         >
           {" "}
           Home{" "}
         </Link>
         <Link
           to="/Products"
-          className="p-4 hover:text-slate-700 hover:border-b-2 hover:border-gray-800"
+          className="p-4 hover:text-slate-700 hover:border-b-2 hover:border-gray-800 "
         >
           Products
         </Link>
