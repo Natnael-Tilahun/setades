@@ -8,7 +8,7 @@ function Products() {
     <Cards url={item.url} title={item.title} price={item.price} key={item.id}/>
     )})
   return (
-    <div className="px-10 pt-5 pb-10">
+    <div className="px-10 pt-5 pb-10 h-auto min-h-[calc(100vh-310px)]">
       <h1 className="text-center font-bold pb-10 underline text-xl">
         Our Products
       </h1>

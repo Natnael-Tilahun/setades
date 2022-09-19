@@ -18,5 +18,18 @@ export default
         title: "Product three",
         price : 700
     },
+    {
+        id: 3,
+        url: "/img14.jpg",
+        title: "Product four",
+        price : 700
+    },
+    {
+        id: 4,
+        url: "/img15.jpg",
+        title: "Product five",
+        price : 700
+    },
+
 
 ]

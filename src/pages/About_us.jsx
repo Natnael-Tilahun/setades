@@ -2,7 +2,7 @@ import React from "react";
 
 function about_us() {
   return (
-    <div className="py-5 px-10 md:px-20 h-[calc(100vh-300px)] ">
+    <div className="py-5 px-10 md:px-20 lg:px-40 h-[calc(100vh-310px)] ">
       <h1 className="text-center text-xl font-bold underline capitalize">
         About Us
       </h1>
