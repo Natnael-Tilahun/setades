@@ -23,7 +23,7 @@ function ProductDetail() {
             src={myProduct.url}
             alt="product image"
           />
-          <div className="shadow p-3 dark:bg-gray-800">
+          <div className="">
           <h1 className="font-bold pt-3 dark:text-white">Product - {myProduct.title}</h1>
           <h1 className="font-bold dark:text-white">Price - ${myProduct.price}</h1>
           <h1 className="font-bold dark:text-white">Phone - 0933654654</h1>

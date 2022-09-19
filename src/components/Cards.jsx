@@ -81,7 +81,7 @@ function Products(props) {
             </span>
             <Link
               to={`/Products/${props.id}`}
-              className="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#fcd5d5] dark:hover:bg-[#fdb8b8] dark:focus:ring-[#fac4c4]"
+              className="text-white dark:text-gray-800 bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#ffcaca] dark:hover:bg-[#fdb8b8] dark:focus:ring-[#fac4c4]"
             >
               Order Now
             </Link>
