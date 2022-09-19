@@ -3,7 +3,7 @@ export default
     {
         id: 0,
         url: "/img4.jpg",
-        title: "Procuct one",
+        title: "Product one",
         price : 300,
         catagory: "catagory one"
     },

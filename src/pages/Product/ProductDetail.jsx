@@ -8,7 +8,7 @@ function ProductDetail() {
   const myProduct = data.find((item) => item.id == productId);
   return (
     <div className="min-h-[calc(100vh-310px)] px-20 py-5 justify-self-center mx-auto items-center rounded-lg shadow w-full max-w-4xl  flex flex-col m-3">
-      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white pt-3 pb-10 uppercase w-full text-center">
+      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black pt-3 pb-10 uppercase w-full text-center">
         Order us using telegram or call
       </h5>
       <div className="flex flex-col md:flex-row gap-10">
@@ -23,9 +23,10 @@ function ProductDetail() {
             src={myProduct.url}
             alt="product image"
           />
-          <h1 className="font-bold pt-3">Product - {myProduct.title}</h1>
-          <h1 className="font-bold ">Price - ${myProduct.price}</h1>
-          <h1 className="font-bold">Phone - 0933654654</h1>
+          <div className="shadow p-3 dark:bg-gray-800">
+          <h1 className="font-bold pt-3 dark:text-white">Product - {myProduct.title}</h1>
+          <h1 className="font-bold dark:text-white">Price - ${myProduct.price}</h1>
+          <h1 className="font-bold dark:text-white">Phone - 0933654654</h1>
 
           <div className="flex items-center mt-2.5 mb-5">
             <svg
@@ -88,6 +89,7 @@ function ProductDetail() {
           >
             <h1>Back to products</h1>
           </Link>
+          </div>
         </div>
       </div>
     </div>
