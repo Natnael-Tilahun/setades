@@ -24,10 +24,10 @@ function ProductDetail() {
             alt="product image"
           />
           <div className="">
-          <h1 className="font-bold text-gray-700 pt-3 dark:text-white">Product - <span className="font-normal">{myProduct.title}</span></h1>
-          <h1 className="font-bold text-gray-700 dark:text-white">Price - <span className="font-normal">${myProduct.price}</span></h1>
-          <h1 className="font-bold text-gray-700 dark:text-white">Description - <span className="font-normal">{myProduct.description}</span></h1>
-          <h1 className="font-bold text-gray-700 dark:text-white">Phone - <span className="font-normal">0933654654</span></h1>
+          <h1 className="font-bold text-gray-700 pt-3 ">Product - <span className="font-normal">{myProduct.title}</span></h1>
+          <h1 className="font-bold text-gray-700 ">Price - <span className="font-normal">${myProduct.price}</span></h1>
+          <h1 className="font-bold text-gray-700 ">Description - <span className="font-normal">{myProduct.description}</span></h1>
+          <h1 className="font-bold text-gray-700 ">Phone - <span className="font-normal">0933654654</span></h1>
 
           <div className="flex items-center mt-2.5 mb-5">
             <svg
