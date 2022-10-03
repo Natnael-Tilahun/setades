@@ -1,35 +1,77 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import data from "../../data";
 import { Link } from "react-router-dom";
 
 function ProductDetail() {
   const { productId } = useParams();
+  const navigate = useNavigate()
   const myProduct = data.find((item) => item.id == productId);
+  const handleGoBack = ()=> {navigate(-1)}
   return (
-    <div className="min-h-[calc(100vh-310px)] px-20 py-5 justify-self-center mx-auto items-center rounded-lg shadow w-full max-w-4xl  flex flex-col m-3">
-      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black pt-3 pb-10 uppercase w-full text-center">
-        Order us using telegram or call
+    <div className="min-h-[calc(100vh-310px)] px-11 py-5 justify-self-center mx-auto items-stretch rounded-lg shadow w-full max-w-6xl  flex flex-col m-3 relative">
+      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-black pt-3 pb-10  w-full text-center">
+        Order us using telegram QR Code or call (0933654654)
       </h5>
       <div className="flex flex-col md:flex-row gap-10">
         <img
-          className="p-0 rounded-t-lg h-auto max-h-full w-full bg-origin-content"
+          className="p-0 rounded-t-lg h-auto max-h-72 w-fit bg-origin-content place-self-center"
           src="/qr.jpg"
           alt="product image"
         />
         <div className="px-0 pb-5 w-full min-w-xl">
           <img
-            className="p-0 rounded-t-lg max-h-56 w-full bg-origin-content bg-cover"
+            className="p-0 rounded-t-lg md:max-h-80 max-h-72 w-full bg-origin-content bg-cover"
             src={myProduct.url}
             alt="product image"
           />
-          <div className="">
+          <div className="mb-10">
           <h1 className="font-bold text-gray-700 pt-3 ">Product - <span className="font-normal">{myProduct.title}</span></h1>
-          <h1 className="font-bold text-gray-700 ">Price - <span className="font-normal">${myProduct.price}</span></h1>
-          <h1 className="font-bold text-gray-700 ">Description - <span className="font-normal">{myProduct.description}</span></h1>
+          <h1 className="font-bold text-gray-700 pt-3 ">Status - <span className="font-normal border-2 border-gray-600 px-1 rounded-md">{myProduct.status == 1 ? "Available" : "Out of stock"}</span></h1>
+          <h1 className="font-bold text-gray-700 ">Price - <span className="font-normal">{myProduct.price} Birr</span></h1>
           <h1 className="font-bold text-gray-700 ">Phone - <span className="font-normal">0933654654</span></h1>
+          <h1 className="font-bold text-gray-700 ">Description - <span className="font-normal">{myProduct.description}</span></h1>
 
-          <div className="flex items-center mt-2.5 mb-5">
+          {myProduct.features == "" ? "":
+             <h1 className="font-bold text-gray-700 ">Features 
+             <span className="font-normal">
+               {myProduct.features.map(item=>
+                 <li className="ml-10">{item}</li>
+               )}
+             </span>
+           </h1>
+          }
+          {myProduct.whatIsInside == "" ? "":
+              <h1 className="font-bold text-gray-700 ">What is inside: 
+              <span className="font-normal">
+                {myProduct.whatIsInside.map(item=>
+                  <li className="ml-10">{item}</li>
+                )}
+              </span>
+            </h1>
+          }
+         
+          {myProduct.disclaimer?
+            <h1 className="font-bold text-gray-700 ">Disclaimer - <span className="font-normal">{myProduct.disclaimer}</span></h1>: ""
+          }
+
+          {myProduct.warning?
+            <h1 className="font-bold text-gray-700 ">Warning - <span className="font-normal">{myProduct.warning}</span></h1>: ""
+          }
+
+          {myProduct.available?
+            <h1 className="font-bold text-gray-700 ">Available in - 
+            <span className="font-normal">
+              {myProduct.available.map(item=>(
+                <li className="ml-10 ">{item}</li>
+              ))}
+            </span>
+            </h1>: ""
+          }
+         
+
+
+          {/* <div className="flex items-center mt-2.5 mb-5">
             <svg
               aria-hidden="true"
               className="w-5 h-5 text-yellow-300"
@@ -83,14 +125,15 @@ function ProductDetail() {
             <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
               5.0
             </span>
-          </div>
-          <Link
-            className="text-right text-[#ff9797] hover:text-[#f87373]"
+          </div> */}
+          {/* <Link
+            
             to="/Products"
-          >
-            <h1>Back to products</h1>
-          </Link>
+          > */}
+          {/* </Link> */}
           </div>
+          <h1 className="text-right text-gray-500 hover:text-gray-800 cursor-pointer absolute bottom-5 right-10" onClick={handleGoBack}>Back to products</h1>
+
         </div>
       </div>
     </div>

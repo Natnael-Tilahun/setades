@@ -47,7 +47,7 @@ function Navbar() {
       <ul
         className={
           nav
-            ? "fixed left-0 top-0 w-[60%] h-screen border-r border-r-gray-900 bg-[#fcd5d5] ease-in-out duration-100"
+            ? "fixed left-0 top-0 w-[60%] h-screen border-r border-r-gray-900 bg-[#fcd5d5] ease-in-out duration-100 z-50"
             : "ease-in-out duration-500 fixed h-screen left-[-100%] text-black"
         }
       >

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 function Products(props) {
   return (
     <>
-      <div className="w-full max-w-xs bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full max-w-xs bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition duration-500 hover:scale-110">
         <a href="#">
           <img
-            className="p-0 rounded-t-lg max-h-56 w-full bg-origin-content"
+            className="p-0 rounded-t-lg max-h-72 w-full bg-origin-content"
             src={props.url}
             alt="product image"
           />
@@ -76,8 +76,8 @@ function Products(props) {
             </span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">
-              ${props.price}
+            <span className="text-2xl font-bold text-gray-900 dark:text-white">
+              {props.price} Birr
             </span>
             <Link
               to={`/Products/${props.id}`}
