@@ -27,7 +27,7 @@ function ProductDetail() {
           />
           <div className="mb-10">
           <h1 className="font-bold text-gray-700 pt-3 ">Product - <span className="font-normal">{myProduct.title}</span></h1>
-          <h1 className="font-bold text-gray-700 pt-3 ">Status - <span className="font-normal border-2 border-gray-600 px-1 rounded-md">{myProduct.status == 1 ? "Available" : "Out of stock"}</span></h1>
+          <h1 className="font-bold text-gray-700 pt-3 ">Status - {myProduct.status == 1 ? <span className="font-normal rounded-md bg-yellow-400 px-3 text-black">Available</span> : <span className="font-normal px-2 rounded-md bg-red-500 text-white">Out of stock</span>}</h1>
           <h1 className="font-bold text-gray-700 ">Price - <span className="font-normal">{myProduct.price} Birr</span></h1>
           <h1 className="font-bold text-gray-700 ">Phone - <span className="font-normal">0933654654</span></h1>
           <h1 className="font-bold text-gray-700 ">Description - <span className="font-normal">{myProduct.description}</span></h1>
