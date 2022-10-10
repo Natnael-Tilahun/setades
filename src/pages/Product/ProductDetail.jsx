@@ -15,7 +15,7 @@ function ProductDetail() {
       </h5>
       <div className="flex flex-col md:flex-row gap-10">
         <img
-          className="p-2 rounded-t-lg h-auto max-h-72 w-fit bg-origin-content md:pt-10"
+          className="p-0 rounded-t-lg h-auto max-h-72 w-fit bg-origin-content md:pt-10"
           src="/qr.jpg"
           alt="product image"
         />

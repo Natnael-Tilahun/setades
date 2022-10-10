@@ -75,7 +75,7 @@ function Navbar() {
           Procucts
         </Link>
         <h1 className="text-center text-gray-600"> Connect with us</h1>
-        <div className="flex text-gray-500 p-2 gap-3 justify-center">
+        <div className="flex text-gray-500 p-2 gap-3 justify-center flex-wrap">
           <a target="__blank" href="https://t.me/Feva_strings"><BsTelegram size={18} /></a>
           <a target="__blank" href="https://www.facebook.com/feven132tad"><BsFacebook size={18} /></a>
           <a target="__blank" href="https://youtube.com/channel/UCro4G-tXDqOtZY7S-sPCdMQ"><BsYoutube size={18} /></a>
@@ -85,7 +85,7 @@ function Navbar() {
           <a target="__blank" href="https://twitter.com/Diva1234Tad?t=8jI-ZkVvLaPgjZKxYn5iQw&s=09"><BsTwitter size={18} /></a>
           <a target="__blank" href="https://wa.me/qr/26OAU4YRL7UFJ1"><BsWhatsapp size={18} /></a>
         </div>
-        <p className="text-gray-500 absolute bottom-2 p-4 text-sm">Setadess@2022. All right reserved.</p>
+        <p className="text-gray-500 absolute bottom-5 px-4 text-xs">Setadess@2022. All right reserved.</p>
       </ul>
     </div>
   );
