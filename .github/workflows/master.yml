@@ -28,8 +28,6 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /setadess.com/
-           exclude: |
-          # **/.git*
-          # **/.git*/**
-          **/node_modules/**
-          fileToExclude.txt
+        exclude: |
+            **/node_modules/**
+            fileToExclude.txt
