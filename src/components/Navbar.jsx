@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { BsFacebook, BsTelegram, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsTelegram, BsYoutube,BsInstagram,BsTwitter,BsWhatsapp } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { FaTiktok } from "react-icons/fa";
 
@@ -24,7 +24,7 @@ function Navbar() {
         to="/"
         onClick={closeNav}
       >
-        <img src="/img.jpg" alt="" className="w-14 rounded-md" />
+        <img src="/img.jpg" alt="" className="rounded-md" width="50" height="50"/>
       </Link>
       <ul className="hidden md:flex">
         <Link
@@ -51,14 +51,14 @@ function Navbar() {
             : "ease-in-out duration-500 fixed h-screen left-[-100%] text-black"
         }
       >
-        <h1
+        {/* <h1
           className="w-full text-3xl font-bold text-[#00df9a] m-0 p-4"
           onClick={closeNav}
         >
           <Link>
-            <img src="/img.jpg" alt="Logo" className="w-14 rounded-md" />
+            <img src="/img.jpg" alt="Logo" className="rounded-md" width="0" height="0" />
           </Link>
-        </h1>
+        </h1> */}
         <hr />
         <Link
           to="/"
@@ -74,13 +74,18 @@ function Navbar() {
         >
           Procucts
         </Link>
+        <h1 className="text-center text-gray-600"> Connect with us</h1>
         <div className="flex text-gray-500 p-2 gap-3 justify-center">
-          <BsTelegram size={25} className="hover:text-white " />
-          <BsFacebook size={25} className="hover:text-white " />
-          <BsYoutube size={25} className="hover:text-white " />
-          <SiGmail size={25} className="hover:text-white " />
-          <FaTiktok size={25} className="hover:text-white " />
+          <a target="__blank" href="https://t.me/Feva_strings"><BsTelegram size={18} /></a>
+          <a target="__blank" href="https://www.facebook.com/feven132tad"><BsFacebook size={18} /></a>
+          <a target="__blank" href="https://youtube.com/channel/UCro4G-tXDqOtZY7S-sPCdMQ"><BsYoutube size={18} /></a>
+          <a target="__blank" href="feven@setadess.com"><SiGmail size={18} /></a>
+          <a target="__blank" href="https://vm.tiktok.com/ZMF2HP38o/"><FaTiktok size={18} /></a>
+          <a target="__blank" href="https://www.instagram.com/p/ChSt44LIE3r/?igshid=YmMyMTA2M2Y="><BsInstagram size={18} /></a>
+          <a target="__blank" href="https://twitter.com/Diva1234Tad?t=8jI-ZkVvLaPgjZKxYn5iQw&s=09"><BsTwitter size={18} /></a>
+          <a target="__blank" href="https://wa.me/qr/26OAU4YRL7UFJ1"><BsWhatsapp size={18} /></a>
         </div>
+        <p className="text-gray-500 absolute bottom-2 p-4 text-sm">Setadess@2022. All right reserved.</p>
       </ul>
     </div>
   );

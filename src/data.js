@@ -87,7 +87,7 @@ export default
         disclaimer: "Colours may vary. Each candle is handcrafted with lots of love and may have slight differences",
         warning: "Please make sure to read the safety sticker located on the bottom of the jar before lighting",
         available: ["Available in 7 diffrent colors","sets include candle holders, Jewelry plate, 2 size candles"],
-        status: 0
+        status: 1
     },
     {
         id: 4,

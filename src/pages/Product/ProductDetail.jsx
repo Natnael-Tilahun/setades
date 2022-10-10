@@ -15,7 +15,7 @@ function ProductDetail() {
       </h5>
       <div className="flex flex-col md:flex-row gap-10">
         <img
-          className="p-0 rounded-t-lg h-auto max-h-72 w-fit bg-origin-content place-self-center"
+          className="p-2 rounded-t-lg h-auto max-h-72 w-fit bg-origin-content md:pt-10"
           src="/qr.jpg"
           alt="product image"
         />
@@ -27,7 +27,7 @@ function ProductDetail() {
           />
           <div className="mb-10">
           <h1 className="font-bold text-gray-700 pt-3 ">Product - <span className="font-normal">{myProduct.title}</span></h1>
-          <h1 className="font-bold text-gray-700 pt-3 ">Status - {myProduct.status == 1 ? <span className="font-normal rounded-md bg-yellow-400 px-3 text-black">Available</span> : <span className="font-normal px-2 rounded-md bg-red-500 text-white">Out of stock</span>}</h1>
+          <h1 className="font-bold text-gray-700 pt-1 ">Status - {myProduct.status == 1 ? <span className="font-normal rounded-md bg-yellow-500 px-3 text-white">Available</span> : <span className="font-normal px-2 rounded-md bg-red-500 text-white">Out of stock</span>}</h1>
           <h1 className="font-bold text-gray-700 ">Price - <span className="font-normal">{myProduct.price} Birr</span></h1>
           <h1 className="font-bold text-gray-700 ">Phone - <span className="font-normal">0933654654</span></h1>
           <h1 className="font-bold text-gray-700 ">Description - <span className="font-normal">{myProduct.description}</span></h1>
@@ -35,8 +35,8 @@ function ProductDetail() {
           {myProduct.features == "" ? "":
              <h1 className="font-bold text-gray-700 ">Features 
              <span className="font-normal">
-               {myProduct.features.map(item=>
-                 <li className="ml-10">{item}</li>
+               {myProduct.features.map((item,index)=>
+                 <li className="ml-10" id={index}>{item}</li>
                )}
              </span>
            </h1>
@@ -44,8 +44,8 @@ function ProductDetail() {
           {myProduct.whatIsInside == "" ? "":
               <h1 className="font-bold text-gray-700 ">What is inside: 
               <span className="font-normal">
-                {myProduct.whatIsInside.map(item=>
-                  <li className="ml-10">{item}</li>
+                {myProduct.whatIsInside.map((item,index)=>
+                  <li className="ml-10" id={index}>{item}</li>
                 )}
               </span>
             </h1>
@@ -62,8 +62,8 @@ function ProductDetail() {
           {myProduct.available?
             <h1 className="font-bold text-gray-700 ">Available in - 
             <span className="font-normal">
-              {myProduct.available.map(item=>(
-                <li className="ml-10 ">{item}</li>
+              {myProduct.available.map((item,index)=>(
+                <li className="ml-10" id={index}> {item}</li>
               ))}
             </span>
             </h1>: ""
@@ -132,7 +132,7 @@ function ProductDetail() {
           > */}
           {/* </Link> */}
           </div>
-          <h1 className="text-right text-gray-500 hover:text-gray-800 cursor-pointer absolute bottom-5 right-10" onClick={handleGoBack}>Back to products</h1>
+          <h1 className="text-right text-[#f89797] hover:text-[#ffbcbc] cursor-pointer absolute bottom-5 right-10" onClick={handleGoBack}>Back to products</h1>
 
         </div>
       </div>
