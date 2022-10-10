@@ -1,12 +1,12 @@
 {
   "name": "setadess",
-  "homepage": "http://setadess.com",
+  "homepage": ".",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "INLINE_RUNTIME_CHUNK=false vite build",
     "preview": "vite preview"
   },
   "dependencies": {
