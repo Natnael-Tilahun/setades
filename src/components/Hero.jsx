@@ -5,7 +5,7 @@ import {FaTiktok} from 'react-icons/fa'
 
 const Hero = () => {
   return (
-    <div className='bg-slate-300 h-[calc(100vh-64px)] bg-[url(/img3.png)] bg-no-repeat w-full bg-center md:relative'>
+    <div className='bg-slate-300 h-[calc(100vh-64px)] bg-[url(/img3.webp)] bg-no-repeat w-full bg-center md:relative'>
       <div className='hidden md:visible md:flex flex-col gap-6 fixed bottom-[screen] md:absolute md:top-[25%] md:right-[0%]  text-gray-700 p-2 px-10 rounded-md '>
         <a target="__blank" href='https://t.me/Feva_strings'><BsTelegram size={40} className='hover:text-white animate-bounce '/></a>
         <a target="__blank" href='https://www.facebook.com/feven132tad'><BsFacebook size={40} className='hover:text-white animate-bounce '/></a>

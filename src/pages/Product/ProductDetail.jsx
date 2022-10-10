@@ -16,7 +16,7 @@ function ProductDetail() {
       <div className="flex flex-col md:flex-row gap-10">
         <img
           className="p-0 rounded-t-lg h-auto max-h-72 w-fit bg-origin-content md:pt-10"
-          src="/qr.jpg"
+          src="/qr.webp"
           alt="product image"
         />
         <div className="px-0 pb-5 w-full min-w-xl">

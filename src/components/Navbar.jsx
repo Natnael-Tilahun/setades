@@ -24,7 +24,7 @@ function Navbar() {
         to="/"
         onClick={closeNav}
       >
-        <img src="/img.jpg" alt="" className="rounded-md" width="50" height="50"/>
+        <img src="/img.webp" alt="" className="rounded-md" width="50" height="50"/>
       </Link>
       <ul className="hidden md:flex">
         <Link
