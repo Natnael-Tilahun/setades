@@ -1,8 +1,7 @@
 on: 
   push:
-    branches:
-      - main
-
+    branchs:
+    - main
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -11,11 +10,26 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
+
+    - name: Use Node.js 14
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+      
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      uses: Setadess/FTP-Deploy-Action@4.3.2
       with:
-        server: www.setadess.com
+        server: ftp.setadess.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /setadess.com/
+           exclude: |
+          # **/.git*
+          # **/.git*/**
+          **/node_modules/**
+          fileToExclude.txt
